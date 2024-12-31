@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main()
+{
+    int a[10],n,i,s,v,l;
+    printf("");
+    scanf("%d",&n);
+    printf("");
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    v=0;
+    while(1)
+    {i=v;
+    l=0;
+    s=0;
+        while(i<n)
+        {
+            if(a[i]==1)
+            {
+                l++;
+            }
+            else{
+                s++;
+            }
+            i++;
+        }
+        if(l==s)
+        {
+            printf("%d",l+l);
+            break;
+        }
+        v++;
+if(v==n)
+    break;
+    }
+}

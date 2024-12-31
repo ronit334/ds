@@ -1,0 +1,45 @@
+#include<stdio.h>
+void f1(int a,int b,int c,int i,int v,int j)
+{
+    for(i=1;i<=10;i++)
+    {
+        if(c*i==a)
+        {
+            v=1;
+            break;
+        }
+    }
+    if(v==1)
+    {
+        for(j=1;j<=10;j++)
+        {
+            if(c*j==b)
+            {
+              v=c;
+                break;
+            }
+        }
+    }
+    if(v<2)
+    {v=0;
+        f1(a,b,c,i,v,j);
+    }
+    else{
+        printf("%d",v);
+    }
+}
+int main()
+{
+    int a,b,c,i=1,v=0,j=1;
+    printf("enter");
+    scanf("%d",&a);
+    scanf("%d",&b);
+    if(a>b)
+    {
+        c=b;
+    }
+    else{
+        c=a;
+    }
+    f1(a,b,c,i,v,j);
+}
